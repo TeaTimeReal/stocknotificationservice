@@ -6,7 +6,7 @@ const STOCK_API_KEY = process.env.STOCK_API_KEY;
 const STOCK_API_URL = `https://api.twelvedata.com/price?symbol=FEZ&apikey=${STOCK_API_KEY}`;
 
 const FILE_PATH = "prices.json";
-const DEBUG_MODE = true; // If true: Requests to the Stock API are mocked with random prices
+const DEBUG_MODE = false; // If true: Requests to the Stock API are mocked with random prices
 const STOCK_REQUEST_INTERVAL_MS = process.env.STOCK_REQUEST_INTERVAL_MS; // Interval in milliseconds to fetch stock data
 const NOTIFICATION_THRESHOLD_PERCENT = process.env.NOTIFICATION_THRESHOLD_PERCENT; // Percentage above which a notification is sent to the Discord Webhook
 const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL;
