@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  stock-monitoring-app:
+    build: .
+    environment:
+      - STOCK_API_KEY=YOUR_API_KEY
+      - STOCK_REQUEST_INTERVAL_MS=YOUR_INTERVAL_FOR_STOCK_POLLING
+      - NOTIFICATION_THRESHOLD_PERCENT=YOUR_THRESHOLD_PERCENT
+      - DISCORD_WEBHOOK_URL=YOUR_DISCORD_WEBHOOK_URL
+    volumes:
+      - ./prices.json:/usr/src/app/prices.json
